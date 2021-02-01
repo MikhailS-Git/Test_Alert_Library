@@ -22,7 +22,8 @@ div.innerHTML = "\n<section id='alertBox'><div id='alertBox-wrapper'><p id='aler
 document.querySelector("body").appendChild(div);
 	
 function Alert(alert_type='info', alert_title='Notification', alert_message='This is a notification.') {
-	
+
+	setTimeout(()=>{
  const alert = document.querySelector('#alertBox');
 	
  alertBox.style.transform = "translate(-50%, -50%) scale(1)";
@@ -38,6 +39,7 @@ function Alert(alert_type='info', alert_title='Notification', alert_message='Thi
  const message = document.querySelector('#alertBox-message');
 
  message.innerText = alert_message;
+	}, 500)
 	
  const button = document.querySelector('#alertBox-button');
 
